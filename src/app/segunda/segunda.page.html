@@ -1,11 +1,10 @@
-<ion-header [translucent]="true">
-  
-</ion-header>
 
-<ion-content [fullscreen]="true">
+
+<ion-content padding >
   
-  <ion-card>
+  <ion-card >
     <ion-card-content padding>
+      <form [formGroup] = "formulario">
       <img src="assets/tela.jpg" alt="imagen" />
   <ion-grid fixed>
     <ion-row>
@@ -17,14 +16,14 @@
       <ion-col size="12" class="ion-padding">
         <ion-item>
           <ion-label position="floating">Nombre Usuario</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName="nombre"></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size="12" class="ion-padding">
         <ion-item > 
           <ion-label position="floating">Contraseña</ion-label >
-          <ion-input type= "password"></ion-input>
+          <ion-input formControlName type= "password"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="12" >
@@ -44,10 +43,8 @@
     </ion-row>
   </ion-grid>
 
-
+</form>
     </ion-card-content>
   </ion-card>
-  
- 
-
 </ion-content>
+

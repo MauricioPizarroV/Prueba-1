@@ -1,34 +1,34 @@
-<ion-header [translucent]="true">
-  
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary" class="ion-text-center">Tel-book</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
+<ion-content>
   <ion-card>
     <ion-card-content padding>
-      <img src="assets/tela.jpg" alt="imagen" />
+
+          <img src="assets/tela.jpg" alt="imagen" />
   <ion-grid fixed>
     <ion-row>
-
-      <ion-col size="12" >
-        <h1 color="primary" class="ion-text-center">Telbook</h1>
-      </ion-col>
-
+    
+    <form [formGroup] = "formularioLogin">
       <ion-col size="12" class="ion-padding">
         <ion-item>
           <ion-label position="floating">Nombre Usuario</ion-label>
-          <ion-input></ion-input>
+          <ion-input formControlName = "nombre"></ion-input>
         </ion-item>
       </ion-col>
 
       <ion-col size="12" class="ion-padding">
         <ion-item > 
           <ion-label position="floating">Contraseña</ion-label >
-          <ion-input type= "password"></ion-input>
+          <ion-input formControlName = "password" type= "password"></ion-input>
         </ion-item>
       </ion-col>
+    </form>
       <ion-col size="12" >
-          <ion-button color="primary" expand="block"> Iniciar sesion</ion-button>
+          <ion-button (click)="ingresar()" color="primary" expand="block"> Iniciar sesion</ion-button>
       </ion-col>
       <ion-col size="12" >
         
@@ -38,7 +38,7 @@
       <ion-button color="secondary" size="small" expand="full" fill = "clear">Recuperar contraseña</ion-button>
     </ion-col>
     <ion-col size="12">
-      <ion-button size="medium" expand="block" color="secondary">Registrarse</ion-button>
+      <ion-button [routerLink] = "['/registro']" size="medium" expand="block" color="secondary">Registrarse</ion-button>
     </ion-col>
 
     </ion-row>
@@ -47,7 +47,6 @@
 
     </ion-card-content>
   </ion-card>
-  
- 
-
 </ion-content>
+
+
