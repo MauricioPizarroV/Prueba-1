@@ -15,11 +15,13 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  names: string;
   formularioLogin: FormGroup;
 
   constructor(public fb: FormBuilder,
     public alertController: AlertController,
     public navCtrl: NavController) {
+      this.names 
 
     this.formularioLogin = this.fb.group({
       'nombre': new FormControl("",Validators.required),
