@@ -56,4 +56,18 @@ export class LoginPage implements OnInit {
       
     }
   }
+
+  async error(){
+    const alert = await this.alertController.create({
+      header: 'Solicitud aceptada',
+      message: 'Se ha enviado una clave a su correo electronico',
+      buttons: ['Confirmar']
+
+    });
+    await alert.present();
+    return;
+
+
+  }
+
 }

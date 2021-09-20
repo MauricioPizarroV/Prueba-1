@@ -35,8 +35,9 @@
         
     </ion-col>
     <ion-col size="12" >
-      <ion-button color="secondary" size="small" expand="full" fill = "clear">Recuperar contraseña</ion-button>
+      <ion-button (click)="error()" color="secondary" size="small" expand="full" fill = "clear">Recuperar contraseña</ion-button>
     </ion-col>
+
     <ion-col size="12">
       <ion-button [routerLink] = "['/registro']" size="medium" expand="block" color="secondary">Registrarse</ion-button>
     </ion-col>
